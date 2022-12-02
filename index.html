@@ -315,8 +315,8 @@
     
 </main>
 <footer class="footer">
-    <div class="div-footer">
-    <div class="container footer-totale">
+    <div class="container div-footer">
+    <div class="footer-totale">
         <div class="footer-container">
     <a class="footer-link list" href="./index.html" lang="en">Web<span class="footer-logo-link">Studia</span></a>
     <address>
@@ -366,16 +366,17 @@
                     </ul>
     </div>
 </div>
-<div class="container footer-totale">
+<div class="footer-totale">
     <div class="container-onlain">
         <strong class="strong-onlain">Підпишіться на розсилку</strong>
         <form class="footer-form">
             <div class="onlain-wrap">
             <input type="email"
             class="onlain-item"
-            name="user-email" 
+            name="user-email"
+            placeholder="E-mail"
             id="user-email">
-            <label for="user-email" class="onlain-label">E-mail</label>
+            <label for="user-email" class="onlain-label"></label>
             </div>
             <button type="submint" class="btn-onlain">Підписатися<svg class="ikon-telegram" width="24" height="24">
             <use href="./images/icons.svg#icon-icontelegram"></use>
@@ -395,7 +396,7 @@
         <p class="modal-title"> Залиште свої дані, ми вам передзвонимо</p>
         <form class="modal-form">
             <div class="modal-field">
-            <label class="input-label">Ім'я
+            <label class="input-label"><span class="input-nome">Ім'я</span>
 
             <span class="input-wrapper">
             <input type="text" 
@@ -412,7 +413,7 @@
                 </div>
                             
                 <div class="modal-field">
-                <label class="input-label">Телефон
+                <label class="input-label"><span class="input-nome">Телефон</span>
                     <span class="input-wrapper">
             <input type="tel" 
                    name="user-tel" 
@@ -426,7 +427,7 @@
                 </label>
                 </div>
                     <div class="modal-field">
-                <label class="input-label">Пошта
+                <label class="input-label"><span class="input-nome">Пошта</span>
                     <span class="input-wrapper">
             <input type="email"  
                    name="user-email" 
@@ -441,7 +442,7 @@
                 </label>
                     </div>
                 <div class="modal-field">
-                    <label for="user-text" class="input-label">Коментар</label>
+                    <label for="user-text" class="input-label"><span class="input-nome">Коментар</span></label>
                     <textarea name="user-text" 
                               id="user-text"
                               class="modal-coment">Введіть текст</textarea>

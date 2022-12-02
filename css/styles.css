@@ -721,7 +721,7 @@ box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px
 .div-footer {
     display: flex;
     align-items: center;
-    justify-content: baseline;
+    justify-content: space-between;
 }
 .footer-form {
     display: flex;
@@ -732,11 +732,11 @@ box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
-    line-height: 1.14px;
+    line-height: 1.17;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #FFFFFF;
-    display: inline-block;
+    display: block;
     margin-bottom: 20px;
 }
 .onlain-item {
@@ -746,8 +746,25 @@ box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px
     border-radius: 4px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 
-    background-color: transparent;
+    background-color: inherit;
+    padding-left: 16px;
+    color:#ffffff;
+    outline: transparent;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+
+.footer-form-input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    align-items: center;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+}
+
 .onlain-wrap {
     position: relative;
 }
@@ -783,6 +800,9 @@ box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px
     /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); */
     border-radius: 4px;
     margin-left: 12px;
+    display: flex;
+    justify-content: center;
+    border: none;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .btn-onlain:focus,
@@ -796,15 +816,7 @@ box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px
     margin-left: 10px;
 }
 
-.footer-form {
-    /* display: flex; */
-    /* align-items: center; */
-}
-.container-onlain {
-    display: flex;
-    display: inline-block;
-    flex-wrap: wrap;
-}
+
 
 
 
@@ -844,7 +856,10 @@ box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px
     background: transparent;
     padding: 6px;
 }
-
+.modal-close:hover .mod-ikon,
+.modal-close:focus .mod-ikon {
+    color: #2196F3;
+}
 
 .is-hidden {
     opacity: 0;
@@ -878,7 +893,14 @@ box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px
     letter-spacing: 0.01em;
     color: #757575;
 }
-    
+.modal-close:focus,
+.modal-close:hover {
+ background-color: #2196F3;
+}  
+.mod-close:focus + .mod-ikon,
+.mod-close:hover + .mod-ikon{
+    fill: #2196F3;
+}
 .input-label {
     position: relative;
     display: block;
@@ -886,9 +908,9 @@ box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px
 }
 .modal-ikon {
     position: absolute;
-    left: 5px; 
+    left: 12px; 
     top: 50%;
-    /* transform: translateY(-50%); */
+    transform: translateY(-50%);
 }
 .modal-input:focus {
     border-color: #2196F3;
@@ -896,9 +918,18 @@ box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px
 .modal-input:focus + .modal-ikon {
     fill: #2196F3
 }  
+.input-wrapper {
+    position: relative;
+}
 .input-wrapper span{
     display: block;
     margin-bottom: 4px;
+}
+.input-nome {
+    font-size: 12px;
+    color: #757575;
+    margin-bottom: 4px;
+    
 }
 .modal-coment {
     width: 100%;
@@ -911,7 +942,7 @@ box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px
     font-size: 12px;
     line-height: 1.16;
     letter-spacing: 0.01em;
-     color: rgba(117, 117, 117, 0.5);
+    color: rgba(117, 117, 117, 0.5);
 }
 .modal-coment:focus {
     border-color: #2196F3;
@@ -930,7 +961,7 @@ box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px
 .check-text span {
     width: 16px;
     height: 15px;
-    border: 0.2px solid #FFFFFF;
+    border: 2px solid #212121;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -943,8 +974,9 @@ box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px
     border: none;
     fill: #ffffff;
 }
-.modal-check:focus + .check-text span {
-     border-color: #212121;
+
+.modal-check:focus+.check-text span {
+    border-color: #2196F3;
 }
 .btn-modal {
     font-family: 'Roboto', sans-serif;
